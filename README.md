@@ -28,3 +28,4 @@ A: Open an issue at https://github.com/mfriik/dnd5e-quickref/issues. Even better
 
 #### Q: I have an idea for a minor tweak, such as adding actions specific for my character. How do I modify the content of the sheet? ####
 A: Open the subfolder called `js`, and edit one of the `data` files. Ask your local computer geek for help if you don't know how to edit those.
+ 
