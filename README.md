@@ -1,31 +1,50 @@
-dnd5e 2014 + dnd5e 2024 QuickReference Sheet 
-==============
-original author https://github.com/crobi/dnd5e-quickref - I only built on top of his work to customize this page to my needs and likes.
-2024 Rules based on content from https://github.com/nico-713/dnd5e-quickref-2024
+# mfriik/dnd5e-quickref
 
-Quick reference sheet for D&amp;D 5e
+A compact, printable and browser-friendly quick reference sheet for Dungeons & Dragons 5th Edition — supporting both 2014 rules and a 2024 rules update. This project is a personalized fork that builds on top of earlier community work to provide a useful, easy-to-edit reference for players and GMs.
 
-Quick Reference can be viewed under
+Live demos
+- [mfriik.github.io/dnd5e-quickref/](https://mfriik.github.io/dnd5e-quickref/)
+- [dnd.milobedzki.pl](https://dnd.milobedzki.pl/)
 
-[https://mfriik.github.io/dnd5e-quickref](https://mfriik.github.io/dnd5e-quickref/)
+What this is
+- A single-page quick reference for common D&D 5e rules, actions, combat steps, conditions, and other frequently used information.
+- Lightweight, static HTML/CSS/JS — easy to host (GitHub Pages or any static host).
+- Customizable: the sheet content is stored in simple JavaScript data files so you can add or change entries without modifying markup.
 
-or
+Quick features
+- Compact layout optimized for quick scanning at the table. Now with Collapsible sections
+- Toggles to enable homebrew rules and optional rules.
+- Dark mode enabled.
+- Easy Switch between 2024 and 2014 Rulesets
 
-[dnd.milobedzki.pl
-](https://dnd.milobedzki.pl/)
+Editing the sheet
+- The content lives in the `js` folder. Edit the `data` files there to:
+  - Add or change actions
+  - Add custom notes or house rules
+  - Add new sections
+- No build step required — changes in the `js` files are reflected immediately in the page.
 
-Icons
-==============
+Repository layout (high level)
+- index.html — main page
+- css/ — stylesheets
+- js/ — JavaScript and data files (edit these to customize)
+- img/ — icons and images
 
-All icons are provided by http://game-icons.net/
-Favicon comes from https://iconduck.com/icons/21871/dragon
+Contributing
+- Found a layout issue or have an improvement idea? Please open an issue: https://github.com/mfriik/dnd5e-quickref/issues
+- Want to contribute a fix or enhancement? Fork the repo, make changes, and submit a pull request. When editing content, prefer small, focused commits and describe the change clearly in the PR.
+- If you want a minor personal tweak (e.g., add actions for a character), edit the `js/data` files in your fork or locally — that’s the fastest route.
 
-FAQ
-===
+Credits and acknowledgements
+- Original project: https://github.com/crobi/dnd5e-quickref
+- 2024 rules update source used: https://github.com/nico-713/dnd5e-quickref-2024
+- Icons: http://game-icons.net/
+- Favicon: https://iconduck.com/icons/21871/dragon
 
-#### Q: I have found a layout issue or have an idea for improvements, what should I do? ####
-A: Open an issue at https://github.com/mfriik/dnd5e-quickref/issues. Even better: fork the project, fix the problem, and post a pull request.
+License
+- Check the repository LICENSE file for license terms. If there is no LICENSE file, assume upstream license applies or contact the maintainer for clarification.
 
-#### Q: I have an idea for a minor tweak, such as adding actions specific for my character. How do I modify the content of the sheet? ####
-A: Open the subfolder called `js`, and edit one of the `data` files. Ask your local computer geek for help if you don't know how to edit those.
- 
+Contact
+- Issues: https://github.com/mfriik/dnd5e-quickref/issues
+
+Thanks for using and improving this quick reference — may your rolls be high!
