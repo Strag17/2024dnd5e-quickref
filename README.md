@@ -1,4 +1,4 @@
-# mfriik/dnd5e-quickref
+# mfriik/dnd5e-quickref v2.0
 
 ## MAKE SURE TO HARD REFRESH (CTRL+SHIFT+R or CTRL+F5) THE PAGE IF IT LOOKS BROKEN
 
