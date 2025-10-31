@@ -251,6 +251,9 @@ function initCollapsibleSections() {
 // Also defines the filtering logic for quickref items
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Trigger fade-in on page load
+    document.body.classList.add('fade-in');
+
     // Initialize collapsible sections
     initCollapsibleSections();
     // Ensure default values for toggles in localStorage
@@ -381,7 +384,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle switching between 2024 and standard rules
     function handle2024RulesToggle() {
         localStorage.setItem('rules2024', rules2024Checkbox.checked ? 'true' : 'false');
-        location.reload();
+        // Fade out the body, then reload the page
+        document.body.classList.remove('fade-in');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            location.reload();
+        }, 650); // This should match the transition duration in quickref.css
     }
 
     // Set up click handlers for the settings toggle items (for better UX)

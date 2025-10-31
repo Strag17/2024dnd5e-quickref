@@ -329,6 +329,18 @@
     color: #000;
 }
 
+/* Page fade transitions for ruleset switching */
+body {
+    opacity: 0;
+    transition: opacity 650ms ease-in-out;
+}
+body.fade-in {
+    opacity: 1;
+}
+body.fade-out {
+    opacity: 0;
+}
+
 /* Page container: centers the main content */
 body {
     display: flex;
@@ -563,16 +575,22 @@ input:checked+.slider:before {
     margin-left: auto;
 }
 
+/* Style for the icon on the feedback link */
+.settings-item .item-icon-link {
+    margin-left: auto;
+    padding-right: 8px; /* Align with toggle switches */
+}
+
 /* Container for settings items to enable flex grid layout */
 #settings-items-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 8px;
 }
 
 .items-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 8px;
 }
 
