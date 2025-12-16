@@ -291,6 +291,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize collapsible sections
     initCollapsibleSections();
     // Ensure default values for toggles in localStorage
+
+    // Update settings section to show app version instead of "collapse all" button
+    const versionDisplay = document.getElementById('app-version-display');
+    if (versionDisplay && window.dndQuickRefAppVersion) {
+        versionDisplay.textContent = 'v' + window.dndQuickRefAppVersion;
+        // Make it look like a label rather than a disabled button
+        versionDisplay.style.cursor = 'default';
+        versionDisplay.style.pointerEvents = 'none';
+    }
     if (localStorage.getItem('optional') === null) {
         localStorage.setItem('optional', 'false');
     }
