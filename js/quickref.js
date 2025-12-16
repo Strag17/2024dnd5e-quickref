@@ -1,5 +1,21 @@
 // Dynamically load the correct data files (2024 or standard) based on localStorage setting
 (function() {
+    // Force a hard refresh if the cached version of the app is outdated.
+    (function() {
+        // Increment this version number when you deploy breaking changes or significant updates.
+        const CURRENT_APP_VERSION = '2.1.0';
+        const VERSION_KEY = 'appVersion';
+        const storedVersion = localStorage.getItem(VERSION_KEY);
+
+        if (storedVersion !== CURRENT_APP_VERSION) {
+            // The user has an old, cached version of the script.
+            // Update the version in localStorage before reloading to prevent a refresh loop.
+            localStorage.setItem(VERSION_KEY, CURRENT_APP_VERSION);
+            // The 'true' argument forces a hard refresh, clearing the cache for the page.
+            location.reload(true);
+        }
+    })();
+
     var rules2024 = localStorage.getItem('rules2024') === 'true';
     var head = document.getElementsByTagName('head')[0];
 
