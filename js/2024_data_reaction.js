@@ -12,19 +12,7 @@ data_reaction = [
             "The attack occurs right before the creature leaves your reach."
         ]
     },
-    {
-        title: "Piss",
-        optional: "Standard rule",
-        icon: "crossed-swords",
-        subtitle: "Enemy leaves your reach",
-        description: "You can rarely move heedlessly past your foes without putting yourself in danger",
-        reference: "PHB, pg. 371.",
-        bullets: [
-            "Trigger: enemy creature you can see leaves your reach using its action, its Bonus Action, its Reaction or one of its Speeds.",
-            "Make one melee attack with a weapon or an unarmed strike against the provoking creature.",
-            "The attack occurs right before the creature leaves your reach."
-        ]
-    },
+
     {
         title: "Readied action",
         optional: "Standard rule",
