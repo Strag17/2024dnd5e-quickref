@@ -1,5 +1,5 @@
 // Dynamically load the correct data files (2024 or standard) based on localStorage setting
-(function() {
+(function () {
     var rules2024 = localStorage.getItem('rules2024') === 'true';
     var head = document.getElementsByTagName('head')[0];
 
@@ -28,6 +28,7 @@
         'data_reaction',
         'data_condition',
         'data_environment',
+        'data_called_shots',
     ];
 
     ruleFiles.forEach(loadRuleFile);
@@ -59,7 +60,7 @@ function add_quickref_item(parent, data, type) {
     itemDesc.className = "item-desc";
     itemDesc.textContent = subtitle;
     itemTextContainer.appendChild(itemDesc);
-    
+
     var itemHeader = document.createElement("div");
     itemHeader.className = "item-header";
     itemHeader.innerHTML = `
@@ -158,6 +159,7 @@ function init() {
     fill_section(data_environment_light, "environment-light", "Environment");
     fill_section(data_environment_vision, "environment-vision", "Environment");
     fill_section(data_environment_cover, "environment-cover", "Environment");
+    fill_section(data_called_shots, "basic-called-shots", "Called Shot");
 
     // Apply initial filtering after items are created
     if (typeof window.handleRulesToggle === 'function') {
@@ -170,7 +172,7 @@ function init() {
 }
 
 // Wait for all data scripts to be loaded before initializing and filtering
-window.onload = function() {
+window.onload = function () {
     function waitForDataAndInit() {
         // Check if all required data variables are defined
         if (
@@ -182,7 +184,8 @@ window.onload = function() {
             typeof data_environment_obscurance !== 'undefined' &&
             typeof data_environment_light !== 'undefined' &&
             typeof data_environment_vision !== 'undefined' &&
-            typeof data_environment_cover !== 'undefined'
+            typeof data_environment_cover !== 'undefined' &&
+            typeof data_called_shots !== 'undefined'
         ) {
             init();
         } else {
@@ -397,20 +400,20 @@ document.addEventListener("DOMContentLoaded", function () {
     window.handleRulesToggle = handleRulesToggle;
 
     // Event listeners for toggles: update localStorage and re-filter on change
-    optionalCheckbox.addEventListener('change', function() {
+    optionalCheckbox.addEventListener('change', function () {
         localStorage.setItem('optional', optionalCheckbox.checked ? 'true' : 'false');
         handleRulesToggle();
     });
-    homebrewCheckbox.addEventListener('change', function() {
+    homebrewCheckbox.addEventListener('change', function () {
         localStorage.setItem('homebrew', homebrewCheckbox.checked ? 'true' : 'false');
         handleRulesToggle();
     });
-    darkModeCheckbox.addEventListener('change', function() {
+    darkModeCheckbox.addEventListener('change', function () {
         localStorage.setItem('darkmode', darkModeCheckbox.checked ? 'true' : 'false');
         handleDarkModeToggle();
     });
     // When the rules toggle changes, update the label immediately then perform the switch (which reloads)
-    rules2024Checkbox.addEventListener('change', function() {
+    rules2024Checkbox.addEventListener('change', function () {
         updateRulesToggleLabel();
         handle2024RulesToggle();
     });
@@ -446,7 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var rules2024ToggleItem = document.getElementById('2024rules-toggle-item');
 
     function handleToggleClick(checkbox) {
-        return function() {
+        return function () {
             checkbox.checked = !checkbox.checked;
             checkbox.dispatchEvent(new Event('change'));
         };
@@ -460,21 +463,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // === Smooth Fade + Grid Reflow ===
 function hideItem(item) {
-  if (item.classList.contains('item-hidden')) return;
-  item.classList.add('item-hiding');
-  setTimeout(() => {
-    item.classList.remove('item-hiding');
-    item.classList.add('item-hidden');
-  }, 250);
+    if (item.classList.contains('item-hidden')) return;
+    item.classList.add('item-hiding');
+    setTimeout(() => {
+        item.classList.remove('item-hiding');
+        item.classList.add('item-hidden');
+    }, 250);
 }
 
 function showItem(item) {
-  if (!item.classList.contains('item-hidden')) return;
-  item.classList.remove('item-hidden');
-  item.classList.add('item-showing');
-  setTimeout(() => {
-    item.classList.remove('item-showing');
-  }, 250);
+    if (!item.classList.contains('item-hidden')) return;
+    item.classList.remove('item-hidden');
+    item.classList.add('item-showing');
+    setTimeout(() => {
+        item.classList.remove('item-showing');
+    }, 250);
 }
 // Replace toggle logic:
 // if (shouldHide) hideItem(item); else showItem(item);
