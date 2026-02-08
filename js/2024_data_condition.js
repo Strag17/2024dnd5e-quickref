@@ -214,7 +214,11 @@ data_condition = [
             "Rolling a 20 immediately causes you to regain 1 hit point.",
             "If you take damage while dying, you suffer a failure. If it's from a critical hit, you suffer 2 failures.",
             "You can be stabilized by an ally taking the Help (Stabilize) action and succeeding on a DC 10 Wisdom (Medicine) check.",
-            "Once stable, you are at 0 HP, still unconcious, but no longer dying. you regain 1 hit point after 1d4 hours if not healed."
+            "Once stable, you are at 0 HP, still unconcious, but no longer dying. you regain 1 hit point after 1d4 hours if not healed.",
+            {
+                homebrew: true,
+                content: "(Homebrew Rule): Whenever you are reduced to 0 hit points and fall unconscious, you gain 1 level of Exhaustion. This exhaustion remains until you finish a Long Rest."
+            }
         ]
     },
     {

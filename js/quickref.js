@@ -69,10 +69,12 @@ function add_quickref_item(parent, data, type) {
     itemHeader.appendChild(itemTextContainer);
     itemHeader.innerHTML += '<span class="chevron"></span>';
 
-    var bulletsHTML = bullets.map(function (bullet) {
+    var bulletsHTML = bullets.map(function (bullet, index) {
+        var contentStr = "";
+        var className = "item-bullet-container";
         if (typeof bullet === 'object' && bullet.collapsible) {
             var contentHtml = bullet.content.map(p => `<p>${p}</p>`).join('');
-            return `
+            contentStr = `
                 <div class="item-collapsible-container">
                     <div class="item-collapsible-title">
                         ${bullet.title}
@@ -81,10 +83,14 @@ function add_quickref_item(parent, data, type) {
                         ${contentHtml}
                     </div>
                 </div>`;
+        } else if (typeof bullet === 'object' && (bullet.homebrew || bullet.optional)) {
+            className += bullet.homebrew ? " homebrew-bullet" : " optional-bullet";
+            contentStr = `<p>${bullet.content}</p>`;
         } else {
-            return `<p>${bullet}</p>`;
+            contentStr = `<p>${bullet}</p>`;
         }
-    }).join("\n<hr>\n");
+        return `<div class="${className}">${contentStr}<hr class="bullet-separator"></div>`;
+    }).join("\n");
 
     var itemContent = document.createElement("div");
     itemContent.className = "item-content collapsed";
@@ -391,6 +397,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.classList.remove('item-removed');
             }
         }
+        // Filter individual homebrew/optional bullets within standard rules
+        var homebrewBullets = document.getElementsByClassName('homebrew-bullet');
+        for (var i = 0; i < homebrewBullets.length; i++) {
+            homebrewBullets[i].style.display = homebrewCheckbox.checked ? 'block' : 'none';
+        }
+        var optionalBullets = document.getElementsByClassName('optional-bullet');
+        for (var i = 0; i < optionalBullets.length; i++) {
+            optionalBullets[i].style.display = optionalCheckbox.checked ? 'block' : 'none';
+        }
+
+        // Fix trailing separators within bullet lists
+        document.querySelectorAll('.item-bullets').forEach(container => {
+            var bullets = Array.from(container.querySelectorAll('.item-bullet-container'));
+            var visibleBullets = bullets.filter(b => b.style.display !== 'none');
+
+            // Show all separators first
+            bullets.forEach(b => {
+                var hr = b.querySelector('.bullet-separator');
+                if (hr) hr.style.display = 'block';
+            });
+
+            // Hide the last visible separator
+            if (visibleBullets.length > 0) {
+                var last = visibleBullets[visibleBullets.length - 1];
+                var hr = last.querySelector('.bullet-separator');
+                if (hr) hr.style.display = 'none';
+            }
+        });
+
         // After filtering, update all "Collapse all" buttons as item visibility has changed
         document.querySelectorAll('.section-container').forEach(section => {
             updateCollapseAllButtonState(section);

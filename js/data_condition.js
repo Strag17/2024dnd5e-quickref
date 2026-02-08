@@ -211,7 +211,11 @@ data_condition = [
             "Rolling a 1 counts as two failures.",
             "Rolling a 20 immediately causes you to regain 1 hit point.",
             "You can also be stabilized by an ally taking the Stabilize action and succeeding on a DC 10 Wisdom (Medicine) check.",
-            "Once stable, you regain 1 hit point after 1d4 hours."
+            "Once stable, you regain 1 hit point after 1d4 hours.",
+            {
+                homebrew: true,
+                content: "(Homebrew Rule): Whenever you are reduced to 0 hit points and fall unconscious, you gain 1 level of exhaustion. This exhaustion remains until you finish a long rest."
+            }
         ]
     },
     {
