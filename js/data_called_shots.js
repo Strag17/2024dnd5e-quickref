@@ -61,7 +61,7 @@ data_called_shots = [
     {
         title: "Hit Die Expansion",
         optional: "Homebrew rule",
-        icon: "heart-organ",
+        icon: "target-dummy",
         subtitle: "Using Hit Die to boost called shots",
         description: "During the declaration, a player may choose to expend Hit Die to change the outcome of the attack.",
         reference: "Homebrew Rule",
@@ -111,7 +111,7 @@ data_called_shots = [
     {
         title: "Neck (-5)",
         optional: "Homebrew rule",
-        icon: "anatomy",
+        icon: "decapitation",
         subtitle: "Penalty: -5",
         description: "Targeting the throat to silence the foe.",
         reference: "Homebrew Rule",
@@ -135,7 +135,7 @@ data_called_shots = [
     {
         title: "Chest (-5)",
         optional: "Homebrew rule",
-        icon: "breastplate",
+        icon: "ribcage",
         subtitle: "Penalty: -5",
         description: "Targeting the torso for a heavy blow.",
         reference: "Homebrew Rule",
@@ -146,7 +146,7 @@ data_called_shots = [
     {
         title: "Vitals (-5)",
         optional: "Homebrew rule",
-        icon: "internal-organ",
+        icon: "heart-organ",
         subtitle: "Penalty: -5",
         description: "Targeting internal organs.",
         reference: "Homebrew Rule",
