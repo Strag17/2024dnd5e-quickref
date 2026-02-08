@@ -217,7 +217,7 @@ data_condition = [
             "Once stable, you are at 0 HP, still unconcious, but no longer dying. you regain 1 hit point after 1d4 hours if not healed.",
             {
                 homebrew: true,
-                content: "(Homebrew Rule): Whenever you are reduced to 0 hit points and fall unconscious, you gain 1 level of Exhaustion. This exhaustion remains until you finish a Long Rest."
+                content: "(Homebrew Rule): Whenever you are reduced to 0 hit points and fall unconscious, upon regaining consciousness you gain 1 level of Exhaustion. This exhaustion remains until you finish a Long Rest."
             }
         ]
     },
