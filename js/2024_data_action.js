@@ -238,5 +238,92 @@ data_action = [
         bullets: [
             "When you describe an action not detailed elsewhere in the rules, the DM tells you whether that action is possible and what kind of roll you need to make, if any, to determine success or failure."
         ]
+    },
+    {
+        title: "Shove Aside*",
+        optional: "Optional rule",
+        icon: "hand",
+        subtitle: "Special melee attack",
+        description: "Shove a creature, either to knock it prone or push it aside from you",
+        reference: "PHB, pg. 195. / DMG, page 272",
+        bullets: [
+            "(Optional Rule):",
+            "With this option, a creature uses the special shove attack to force a target to the side.",
+            "The attacker has Disadvantage on its Strength (Athletics) check when it does so.",
+            "If that check is successful, the attacker moves the target 5 feet to a different space within its reach."
+        ]
+    },
+    {
+        title: "Disarm*",
+        optional: "Optional rule",
+        icon: "sword-break",
+        subtitle: "Knock item out of enemy's grasp",
+        description: "A creature can use a weapon attack to knock a weapon or another item from a target's grasp.",
+        reference: "DMG, page 271",
+        bullets: [
+            "(Optional Rule):",
+            "The attacker makes an attack roll contested by the target's Strength (Athletics) check or Dexterity (Acrobatics) check.",
+            "If the attacker wins the contest, the attack causes no damage or other ill effect, but the defender drops the item.",
+            "The attacker has Disadvantage on its attack roll if the target is holding the item with two or more hands.",
+            "The target has Advantage on its ability check if it is larger than the attacking creature, or Disadvantage if it is smaller."
+
+        ]
+    },
+    {
+        title: "Overrun*",
+        optional: "Optional rule",
+        icon: "shield-bash",
+        subtitle: "Run through a hostile space",
+        description: "When a creature tries to move through a hostile creature's space, the mover can try to force its way through by overrunning the hostile creature.",
+        reference: "DMG, page 272",
+        bullets: [
+            "(Optional Rule):",
+            "As an action, the mover makes a Strength (Athletics) check contested by the hostile creature's Strength (Athletics) check.",
+            "The creature attempting the overrun has Advantage on this check if it is larger than the hostile creature, or Disadvantage if it is smaller.",
+            "If the mover wins the contest, it can move through the hostile creature's space once this turn."
+        ]
+    },
+    {
+        title: "Tumble*",
+        optional: "Optional rule",
+        icon: "tumble",
+        subtitle: "Tumble through a hostile space",
+        description: "A creature can try to tumble through a hostile creature's space, ducking and weaving past the opponent.",
+        reference: "DMG, page 272",
+        bullets: [
+            "(Optional Rule):",
+            "As an action, the tumbler makes a Dexterity (Acrobatics) check contested by the hostile creature's Dexterity (Acrobatics) check.",
+            "If the tumbler wins the contest, it can move through the hostile creature's space once this turn."
+        ]
+    },
+    {
+        title: "Mark*",
+        optional: "Optional rule",
+        icon: "cross-mark",
+        subtitle: "Give Advantage on Opportunity Attacks",
+        description: "This option makes it easier for melee combatants to harry each other with opportunity attacks.",
+        reference: "DMG, page 271",
+        bullets: [
+            "(Optional Rule):",
+            "When a creature makes a melee attack, it can also mark its target.",
+            "Until the end of the attacker's next turn, any opportunity attack it makes against the marked target has Advantage.",
+            "The opportunity attack doesn't expend the attacker's reaction",
+            "The attacker can't make the attack if anything, such as the <i>Incapacitated</i> condition or the <i>Shocking Grasp</i> spell, is preventing it from taking reactions.",
+            "The attacker is limited to one opportunity attack per turn.",
+        ]
+    },
+    {
+        title: "Climb onto a bigger creature*",
+        optional: "Optional rule",
+        icon: "mountain-climbing",
+        subtitle: "Climb a bigger creature",
+        description: "If one creature wants to jump onto another creature, it can do so by grappling. A suitably large opponent can be treated as terrain for the purpose of jumping onto its back or clinging to a limb.",
+        reference: "DMG, page 271",
+        bullets: [
+            "(Optional Rule):",
+            "After making any ability checks necessary to get into position and onto the larger creature, the smaller creature uses its action to make a Strength (Athletics) or Dexterity (Acrobatics) check contested by the target's Dexterity (Acrobatics) check.",
+            "If it wins the contest, the smaller creature successfully moves into the target creature's space.",
+            "The smaller creature moves with the target and has Advantage on attack rolls against it.",
+        ]
     }
 ]

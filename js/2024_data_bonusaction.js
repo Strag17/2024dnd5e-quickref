@@ -42,10 +42,36 @@ data_bonusaction = [
         subtitle: "Roll for the effect",
         description: "Roll the dice as per the description of the potion",
         bullets: [
-            "Using a Potion: Potions are consumable items. Drinking a potion or administering it to another creature requires a Bonus Action.", 
+            "Using a Potion: Potions are consumable items. Drinking a potion or administering it to another creature requires a Bonus Action.",
             "Applying an oil might take longer as specified in its description.",
             "Once used, a potion takes effect immediately, and it is used up."
         ],
     },
-    
+    {
+        title: "Overrun*",
+        optional: "Optional rule",
+        icon: "shield-bash",
+        subtitle: "Run through a hostile space",
+        description: "When a creature tries to move through a hostile creature's space, the mover can try to force its way through by overrunning the hostile creature.",
+        reference: "DMG, page 272",
+        bullets: [
+            "(Optional Rule):",
+            "As a bonus action, the mover makes a Strength (Athletics) check contested by the hostile creature's Strength (Athletics) check.",
+            "The creature attempting the overrun has Advantage on this check if it is larger than the hostile creature, or Disadvantage if it is smaller.",
+            "If the mover wins the contest, it can move through the hostile creature's space once this turn."
+        ]
+    },
+    {
+        title: "Tumble*",
+        optional: "Optional rule",
+        icon: "tumble",
+        subtitle: "Tumble through a hostile space",
+        description: "A creature can try to tumble through a hostile creature's space, ducking and weaving past the opponent.",
+        reference: "DMG, page 272",
+        bullets: [
+            "(Optional Rule):",
+            "As a bonus action, the tumbler makes a Dexterity (Acrobatics) check contested by the hostile creature's Dexterity (Acrobatics) check.",
+            "If the tumbler wins the contest, it can move through the hostile creature's space once this turn."
+        ]
+    }
 ]
