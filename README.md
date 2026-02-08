@@ -1,4 +1,4 @@
-# 🎲 mfriik/dnd5e-quickref v2.0
+# 🎲 dnd5e-quickref
 
 > **💡 Important:**  
 > If the page looks off, sections don’t load, or you’re not seeing the newest features —  
@@ -12,17 +12,10 @@
 
 ---
 
-## 🌐 Live View
-
-- [**mfriik.github.io/dnd5e-quickref**](https://mfriik.github.io/dnd5e-quickref/)  
-- [**dnd.milobedzki.pl**](https://dnd.milobedzki.pl/)
-
----
-
 ## 🧾 What This Is
 
 A **compact, printable, browser-friendly quick reference sheet** for *Dungeons & Dragons 5e* —  
-supporting both the classic **2014** and the updated **2024** rulesets.
+supporting both the classic **2014** and the updated **2024** rulesets aswell as some of my homebrew content.
 
 It’s built for players and DMs who want the essentials at their fingertips —  
 **no scrolling through PDFs, no rules hunting mid-combat.**
