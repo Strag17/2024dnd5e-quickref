@@ -426,6 +426,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        // Show/hide Called Shots section based on homebrew toggle
+        var calledShotsSection = document.getElementById('section-called-shots');
+        if (calledShotsSection) {
+            calledShotsSection.style.display = homebrewCheckbox.checked ? 'flex' : 'none';
+        }
+
         // After filtering, update all "Collapse all" buttons as item visibility has changed
         document.querySelectorAll('.section-container').forEach(section => {
             updateCollapseAllButtonState(section);
