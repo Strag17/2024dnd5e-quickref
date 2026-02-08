@@ -73,10 +73,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Head (-5)",
+        title: "Head",
         optional: "Homebrew rule",
         icon: "headshot",
-        subtitle: "Penalty: -5",
+        subtitle: "-5 to hit",
         description: "Targeting the head to disorient the foe.",
         reference: "Homebrew Rule",
         bullets: [
@@ -85,10 +85,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Ear (-5)",
+        title: "Ear",
         optional: "Homebrew rule",
         icon: "human-ear",
-        subtitle: "Penalty: -5",
+        subtitle: "-5 to hit",
         description: "Targeting the ear to deafen the foe.",
         reference: "Homebrew Rule",
         bullets: [
@@ -97,10 +97,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Eye (-5)",
+        title: "Eye",
         optional: "Homebrew rule",
         icon: "bleeding-eye",
-        subtitle: "Penalty: -5",
+        subtitle: "-5 to hit",
         description: "Targeting the eye to blind the foe.",
         reference: "Homebrew Rule",
         bullets: [
@@ -109,10 +109,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Neck (-5)",
+        title: "Neck",
         optional: "Homebrew rule",
         icon: "decapitation",
-        subtitle: "Penalty: -5",
+        subtitle: "-5 to hit",
         description: "Targeting the throat to silence the foe.",
         reference: "Homebrew Rule",
         bullets: [
@@ -121,10 +121,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Bleeding (-5)",
+        title: "Bleeding",
         optional: "Homebrew rule",
         icon: "dripping-blade",
-        subtitle: "Penalty: -5",
+        subtitle: "-5 to hit",
         description: "Causing a deep wound.",
         reference: "Homebrew Rule",
         bullets: [
@@ -133,10 +133,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Chest (-5)",
+        title: "Chest",
         optional: "Homebrew rule",
         icon: "ribcage",
-        subtitle: "Penalty: -5",
+        subtitle: "-5 to hit",
         description: "Targeting the torso for a heavy blow.",
         reference: "Homebrew Rule",
         bullets: [
@@ -144,10 +144,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Vitals (-5)",
+        title: "Vitals",
         optional: "Homebrew rule",
         icon: "heart-organ",
-        subtitle: "Penalty: -5",
+        subtitle: "-5 to hit",
         description: "Targeting internal organs.",
         reference: "Homebrew Rule",
         bullets: [
@@ -155,10 +155,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Arm (-3)",
+        title: "Arm",
         optional: "Homebrew rule",
         icon: "mailed-fist",
-        subtitle: "Penalty: -3",
+        subtitle: "-3 to hit",
         description: "Targeting an arm to weaken attacks.",
         reference: "Homebrew Rule",
         bullets: [
@@ -166,10 +166,10 @@ data_called_shots = [
         ]
     },
     {
-        title: "Leg/Wing (-3)",
+        title: "Leg/Wing",
         optional: "Homebrew rule",
         icon: "boot-stomp",
-        subtitle: "Penalty: -3",
+        subtitle: "-3 to hit",
         description: "Targeting a limb to hinder movement.",
         reference: "Homebrew Rule",
         bullets: [
