@@ -216,5 +216,29 @@ data_condition = [
             "You can be stabilized by an ally taking the Help (Stabilize) action and succeeding on a DC 10 Wisdom (Medicine) check.",
             "Once stable, you are at 0 HP, still unconcious, but no longer dying. you regain 1 hit point after 1d4 hours if not healed."
         ]
+    },
+    {
+        title: "Bleeding **",
+        optional: "Homebrew rule",
+        icon: "bleeding-heart",
+        subtitle: "You are bleeding",
+        description: "You are bleeding from a wound.",
+        bullets: [
+            "A bleeding creature takes 4 damage at the beginning of each of its turns.",
+            "To end the condition, any form of healing or a DC 14 Medicine check must be succeeded by the creature, or an ally mending them.",
+            "They can use their Bonus Action to mitigate the blood loss by holding one hand against the wound, losing 1 Hit Point at the beginning of their turn instead, and cannot use this hand for anything else."
+        ]
+    },
+    {
+        title: "Hemorrhaging **",
+        optional: "Homebrew rule",
+        icon: "droplets",
+        subtitle: "You are bleeding profusely",
+        description: "Your wounds are severe and the bleeding is worsening.",
+        bullets: [
+            "A hemorrhaging creature is bleeding (see the condition).",
+            "At the beginning of each of the creature's turns, the amount of bleeding damage it takes increases by 4 damage.",
+            "Anything that ends or negates the bleeding condition also applies to the hemorrhaging condition."
+        ]
     }
 ]
