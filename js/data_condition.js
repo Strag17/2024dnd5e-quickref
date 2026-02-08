@@ -214,7 +214,7 @@ data_condition = [
             "Once stable, you regain 1 hit point after 1d4 hours.",
             {
                 homebrew: true,
-                content: "(Homebrew Rule): Whenever you are reduced to 0 hit points and fall unconscious, you gain 1 level of exhaustion. This exhaustion remains until you finish a long rest."
+                content: "(Homebrew Rule): Whenever you are reduced to 0 hit points and fall unconscious, upon regaining consciousness you gain 1 level of Exhaustion. This exhaustion remains until you finish a Long Rest."
             }
         ]
     },
