@@ -140,7 +140,9 @@ function add_quickref_item(parent, data, type) {
     });
 
     item.setAttribute("title", optional);
-    parent.appendChild(item);
+    if (parent) {
+        parent.appendChild(item);
+    }
 }
 
 // Fill a section with quickref items from a data array
@@ -263,9 +265,13 @@ function initCollapsibleSections() {
         if (collapseAllBtn) {
             collapseAllBtn.addEventListener('click', (event) => {
                 event.stopPropagation(); // Prevent section from collapsing/expanding
-                const expandedItems = section.querySelectorAll('.item:not(:has(.item-content.collapsed)) .item-header');
-                expandedItems.forEach(header => {
-                    header.click();
+                const items = section.querySelectorAll('.item');
+                items.forEach(item => {
+                    const content = item.querySelector('.item-content');
+                    const header = item.querySelector('.item-header');
+                    if (content && !content.classList.contains('collapsed') && header) {
+                        header.click();
+                    }
                 });
             });
         }
@@ -279,7 +285,11 @@ function updateCollapseAllButtonState(section) {
     if (!collapseAllBtn) return;
 
     // Find items that are both visible (not filtered out) and expanded
-    const expandedVisibleItems = section.querySelectorAll('.item:not(.item-hidden):not(:has(.item-content.collapsed))');
+    const items = section.querySelectorAll('.item:not(.item-hidden)');
+    const expandedVisibleItems = Array.from(items).filter(item => {
+        const content = item.querySelector('.item-content');
+        return content && !content.classList.contains('collapsed');
+    });
 
     if (expandedVisibleItems.length === 0) {
         collapseAllBtn.disabled = true;
