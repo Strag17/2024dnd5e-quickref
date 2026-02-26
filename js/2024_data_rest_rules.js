@@ -32,7 +32,7 @@ data_rest_rules = [
     {
         title: "Mid Rest",
         optional: "Homebrew rule",
-        icon: "camp-cooking-pot",
+        icon: "sleepy",
         subtitle: "At least 8 hours long",
         description: "A mid rest is a period of extended downtime, at least 8 hours long, during which a character sleeps or performs light activity; reading, talking, eating, or standing watch for no more than 2 hours. If the rest is interrupted by a period of strenuous activity - at least 1 hour of walking, fighting, casting spells, or similar adventuring activity - the characters must begin the rest again to gain any benefit from it.",
         reference: "Homebrew Rule",
