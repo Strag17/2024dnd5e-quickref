@@ -29,6 +29,7 @@
         'data_condition',
         'data_environment',
         'data_called_shots',
+        'data_rest_rules',
     ];
 
     ruleFiles.forEach(loadRuleFile);
@@ -168,6 +169,7 @@ function init() {
     fill_section(data_environment_vision, "environment-vision", "Environment");
     fill_section(data_environment_cover, "environment-cover", "Environment");
     fill_section(data_called_shots, "basic-called-shots", "Called Shot");
+    fill_section(data_rest_rules, "basic-rest-rules", "Rest Rule");
 
     // Apply initial filtering after items are created
     if (typeof window.handleRulesToggle === 'function') {
@@ -193,7 +195,8 @@ window.onload = function () {
             typeof data_environment_light !== 'undefined' &&
             typeof data_environment_vision !== 'undefined' &&
             typeof data_environment_cover !== 'undefined' &&
-            typeof data_called_shots !== 'undefined'
+            typeof data_called_shots !== 'undefined' &&
+            typeof data_rest_rules !== 'undefined'
         ) {
             init();
         } else {
@@ -440,6 +443,11 @@ document.addEventListener("DOMContentLoaded", function () {
         var calledShotsSection = document.getElementById('section-called-shots');
         if (calledShotsSection) {
             calledShotsSection.style.display = homebrewCheckbox.checked ? 'flex' : 'none';
+        }
+
+        var restRulesSection = document.getElementById('section-rest-rules');
+        if (restRulesSection) {
+            restRulesSection.style.display = homebrewCheckbox.checked ? 'flex' : 'none';
         }
 
         // After filtering, update all "Collapse all" buttons as item visibility has changed
